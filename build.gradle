@@ -1,0 +1,24 @@
+group 'com.paprika'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
+
+test {
+    useTestNG()
+    include '**/*Test.class'
+}
+
+dependencies {
+    compile 'org.apache.logging.log4j:log4j-api:2.7',
+            'org.apache.logging.log4j:log4j-core:2.7',
+            'org.apache.logging.log4j:log4j-slf4j-impl:2.7'
+
+    testCompile 'org.testng:testng:6.9.12'
+}
